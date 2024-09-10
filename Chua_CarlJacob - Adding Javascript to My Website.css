@@ -1,0 +1,172 @@
+/* Styling the top bar */
+.bar a {
+	float: left; 
+	color: #f2f2f2; text-align: center;
+	padding: 14px 16px;
+  	transition: 0.3s;
+	text-decoration: none; font-size: 17px; font-family: "Monaco", monospace;
+	cursor: pointer;
+}
+
+.bar a:hover {
+	background-color: #bababa;
+	color: #000000;
+	opacity: 1;
+}
+
+.bar a.activename {
+	background-color: #7a7a7a;
+	color: #000000;
+}
+
+.bar {
+	overflow: hidden;
+	background-color: #000000;
+	border-radius: 8px;
+}
+
+/* Styling the background */
+html {
+	position: relative;
+	animation-name: bgbg;
+	background-color: #000000;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgbg {
+	0% {background-image: url("https://i.imgur.com/DsEZQM9.jpg"); background-attachment: fixed;}
+	25% {background-image: url("https://i.imgur.com/9uBauKf.jpg"); background-attachment: fixed;}
+	50% {background-image: url("http://i.imgur.com/DpCvU34.jpg"); background-attachment: fixed;}
+	75% {background-image: url("https://i.imgur.com/rG0c4qM.jpg"); background-attachment: fixed;}
+	100% {background-image: url("https://i.imgur.com/DsEZQM9.jpg"); background-attachment: fixed;}
+}
+
+/* Styling Profile Body */
+
+hr {
+	width: 60%; height:1px
+}
+
+h1 {
+	font-size: 40px;
+}
+
+/* Profile Styles */
+.dprof {
+	margin: auto; text-align: center; padding: 15px;
+	width: 80%; transition: 0.3s;
+	font-family: "Monaco", monospace; font-size: 30px; color: #FFFFFF; text-shadow: 4px 4px #000000;
+}
+
+.dprof:hover {
+ 	 background-color: #000000;
+ 	 opacity: 1;
+}
+
+/* Styling Tables */
+.row {
+  display: table;
+  margin: auto; text-align: center;
+  width: 80%;
+}
+
+.column:hover {
+ 	 background-color: #000000;
+ 	 opacity: 1;
+}
+
+
+.column {
+  display: table-cell;
+  text-align: center; width: 33.33%; padding: 15px; transition: 0.3s;
+  font-family: "Monaco", monospace; font-size: 30px; color: #FFFFFF; text-shadow: 4px 4px #000000;
+}
+
+/* Styling animation properties */
+
+.bocchi:hover .overlay {
+	 opacity: 1;
+}
+
+.bocchi {
+	position: fixed; 
+	animation-name: kuru;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.hitori {
+	transform: rotate(90deg);
+	width: 200px;
+	height: 200px;
+}
+@keyframes kuru {
+  0%   {background: transparent; top:50px;}
+  50%  {background: transparent; top:700px;}
+  100% {background: transparent; top:50px;}
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  transition: .5s ease;
+  animation-name: kuru;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+/* Button Styles and Properties */
+.button {
+  position: fixed; bottom: 1%; right: 1%; 
+  opacity: 0.7; transition: 0.3s;
+  background: transparent;
+  border: 2px solid white; border-radius: 8px; padding: 5px;
+  font-size: 15px; font-family: "Monaco", monospace; text-shadow: 2px 2px #000000; 
+  cursor: pointer;
+}  
+
+.button a {
+	color: #FFFFFF; text-decoration: none;
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+/* Pic Transition, Styles and Properties */
+
+.pic{
+  display: table-cell;
+  position: relative; text-align: center; 
+  width: 20%; padding: 50px;
+}
+
+.stuff {
+	width: 80%; margin: auto;
+}
+
+/* Pic hover */
+
+.ptt {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background-color: #000000;
+  overflow: hidden;
+  width: 100%; height: 0;
+  opacity: 0.7; transition: .5s ease;
+}
+
+.pic:hover .ptt{
+	bottom: 0;
+  height: 100%
+}
+
+.ptext {
+  white-space: nowrap; color: white; font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

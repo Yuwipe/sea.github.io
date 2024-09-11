@@ -27,6 +27,8 @@
 
 /* Styling the background */
 html {
+	margin: 0;
+    overflow: hidden;
 	position: relative;
 	animation-name: bgbg;
 	background-color: #000000;
@@ -170,3 +172,24 @@ h1 {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+/* Cursor Trail */
+.trail {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: radial-gradient(circle, rgb(0, 255, 0), transparent);
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 9999;
+  }
+@keyframes fade {
+	from {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	to {
+	  transform: scale(0.5);
+	  opacity: 0;
+	}
+  }

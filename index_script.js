@@ -1,31 +1,3 @@
-// For the main website
-function updateSkills() {
-    var newSkill = document.getElementById("skillsInput").value;
-    var skillsList = document.getElementById("skillslist");
-        if (newSkill.trim() === "") {
-            alert("Please enter a valid skill.");
-            return;
-            }
-        var listItem = document.createElement("li");
-        listItem.textContent = newSkill;
-        skillsList.appendChild(listItem);
-
-        document.getElementById("skillsInput").value = "";
-    }
-
-
-function updateExperience() {
-    var newExperience = document.getElementById("experienceInput").value;
-    var experienceParagraph = document.getElementById("experiencelist");
-
-        if (newExperience.trim() === "") {
-            alert("Please enter a valid experience.");
-            return;
-        }
-            experienceParagraph.textContent += "\n" + newExperience;
-            document.getElementById("experienceInput").value = "";
-        }
-
 // Cursor Trail
 const trailCount = 20; // Number of trails to create
 const trails = [];

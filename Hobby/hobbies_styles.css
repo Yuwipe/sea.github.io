@@ -26,10 +26,10 @@ html, body {
   }
 
   body {
+    background-color: #000000;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    animation: backgroundLoop 25s infinite;
+    animation: backgroundLoop 30s infinite;
   }
 
   /* Background animation with 5 images, each shown for 5 seconds */
@@ -37,29 +37,32 @@ html, body {
     0% {
       background-image: url('JaneDoe.jpg');
     }
-    20% {
-      background-image: url('JaneDoe.jpg');
-    }
-    25% {
+    11% {
       background-image: url('JinhsiWuWa.jpg');
     }
-    45% {
+    22% {
       background-image: url('JinhsiWuWa.jpg');
     }
-    50% {
-      background-image: url('image3.jpg');
+    33% {
+      background-image: url('Rushia.jpg');
     }
-    70% {
-      background-image: url('image3.jpg');
+    44% {
+      background-image: url('Rushia.jpg');
     }
-    75% {
-      background-image: url('image4.jpg');
+    55% {
+      background-image: url('Tatsumaki.jpg');
     }
-    95% {
-      background-image: url('image4.jpg');
+    66% {
+      background-image: url('Tatsumaki.jpg');
+    }
+    78% {
+      background-image: url('Midoriya.png');
+    }
+    88% {
+      background-image: url('Midoriya.png');
     }
     100% {
-      background-image: url('image5.jpg');
+      background-image: url('JaneDoe.jpg');
     }
   }
   
@@ -243,7 +246,7 @@ html, body {
   text-align: center;
   color: #000000;
   text-shadow: 4px 2px #30b969;
-  top: 45%; left: 50%;
+  top: 10%; left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 400%;
@@ -396,3 +399,74 @@ html, body {
       background-color: var(--secondary);
     }
   }
+
+/* Hobbies Card */
+.carrot {
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 4px;
+    background:rgba(14, 14, 14, 0.5);
+    display: flex;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    gap: 5px;
+    padding: 0.4em;
+    overflow: hidden; /* Hide overflow content */
+}
+
+.carrot p {
+  font-size: 150%;
+}
+
+.carrot div {
+    height: 100%;
+    flex: 1;
+    color: #28FF00;
+    font-size: 120%;
+    text-shadow: 2px 2px #000000;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: flex 0.5s ease, background 0.5s ease;
+    border: 3px solid #28FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure absolute positioning for child elements */
+}
+
+.carrot span {
+    min-width: 14em;
+    padding: 0.5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-transform: uppercase;
+    color: #28FF00;
+    letter-spacing: 0.1em;
+    position: absolute; /* Positioned absolutely within the parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg); /* Center and rotate */
+}
+
+.carrot div:hover {
+    flex: 4;
+    background: rgba(0, 0, 0, 0.5); /* Darker background on hover for contrast */
+}
+
+.carrot div:hover span {
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 1; /* Ensure text is fully visible */
+}
+
+.carrot div span {
+    opacity: 0; /* Hide text initially */
+}
+
+.carrot div:hover p {
+    opacity: 0;
+}

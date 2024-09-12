@@ -4,62 +4,72 @@
 <link rel="stylesheet" href="index_styles.css">
 <body>
 	<script src="index_script.js"></script>
-	<div id="topbar">
-		<div class="bar">
-  			<a class="activename" href="#profile">Profile</a>
-  			<a href="./hobbies.html">Hobbies</a>
-  			<a href="">Gallery</a>
-  			<a href="#skill">Skills</a>
-  			<a href="#back">Background</a>
+
+	<div id="loading-screen" class="ui-loadingScreen">
+		<div class="loadingScreen-loader">
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		</div>
+		<div class="ui-text">
+		  Synchronization
+		  <div class="ui-dot"></div>
+		  <div class="ui-dot"></div>
+		  <div class="ui-dot"></div>
 		</div>
 	</div>
 
-<div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>  
+	<div id="main-content" style="display: none;">
 
-<div class="arrow"><a href="./hobbies.html">
-  <div class="arrow-top"></div>
-  <div class="arrow-bottom"></div>
-  </a>
-</div>
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>  
 
-<div class="cube">
-  <div class="topD"></div>
-  <div>
-	<span style="--i:0"></span>
-	<span style="--i:1"></span>
-	<span style="--i:2"></span>
-	<span style="--i:3"></span>
-  </div>
+		<div class="cards">
+			<div class="card red">
+				<p class="tip">ABOUT ME</p>
+				<a href=""></a>
+			</div>
+			<div class="card blue">
+				<a href="./Hobby/hobbies.html">
+				<p class="tip">HOBBIES</p>
+				</a>
+			</div>
+			<div class="card green">
+				<p class="tip">GALLERY</p>
+			</div>
+		</div>
 
-  <div class="cube2">
-	<div>
-	  <span style="--i:0"></span>
-	  <span style="--i:1"></span>
-	  <span style="--i:2"></span>
-	  <span style="--i:3"></span>
+		<div class="cube">
+			<div class="topD"></div>
+			<div>
+				<span style="--i:0"></span>
+				<span style="--i:1"></span>
+				<span style="--i:2"></span>
+				<span style="--i:3"></span>
+			</div>
+			<div class="cube2">
+				<div>
+					<span style="--i:0"></span>
+					<span style="--i:1"></span>
+					<span style="--i:2"></span>
+					<span style="--i:3"></span>
+				</div>
+				<div class="cube3">
+					<div class="top3"></div>
+					<div>
+						<span style="--i:0"></span>
+						<span style="--i:1"></span>
+						<span style="--i:2"></span>
+						<span style="--i:3"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="personal">
+			<h1> My <br>Personal <br> Website</h1>
+		</div>
 	</div>
-
-	<div class="cube3">
-	  <div class="top3"></div>
-	  <div>
-		<span style="--i:0"></span>
-		<span style="--i:1"></span>
-		<span style="--i:2"></span>
-		<span style="--i:3"></span>
-	  </div>
-
-	</div>
-
-  </div>
-</div>
-
-<div class="personal">
-  <h1> My <br>Personal <br> Website</h1>
-  <div class="personal-top"></div>
-  <div class="personal-bottom"></div>
-</div>
-
 </body>
 </html>

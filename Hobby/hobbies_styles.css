@@ -1,30 +1,3 @@
-/* Styling the top bar */
-.bar a {
-	float: left; 
-	color: #f2f2f2; text-align: center;
-	padding: 14px 16px;
-  	transition: 0.3s;
-	text-decoration: none; font-size: 17px; font-family: "Monaco", monospace;
-	cursor: pointer;
-}
-
-.bar a:hover {
-	background-color: #bababa;
-	color: #000000;
-	opacity: 1;
-}
-
-.bar a.activename {
-	background-color: #7a7a7a;
-	color: #000000;
-}
-
-.bar {
-	overflow: hidden;
-	background-color: #000000;
-	border-radius: 8px;
-}
-
 /* Cursor Trail */
 .trail {
 	position: absolute;
@@ -47,110 +20,106 @@
   }
 
 /* New Addons */
-html {
+html, body {
 	height:100%;
+  margin: 0;
   }
-  
+
   body {
-	margin:0;
-  }
-  
-  .bg {
-	animation:slide 10s ease-in-out infinite alternate;
-	background-image: linear-gradient(-60deg, #000000 50%, #02cf57 50%);
-	bottom:0;
-	left:-50%;
-	opacity:.5;
-	position:fixed;
-	right:-50%;
-	top:0;
-	z-index:-1;
-  }
-  
-  .bg2 {
-	animation-direction:alternate-reverse;
-	animation-duration:10s;
-  }
-  
-  .bg3 {
-	animation-duration:15s;
-  }
-  
-  @keyframes slide {
-	0% {
-	  transform:translateX(-25%);
-	}
-	100% {
-	  transform:translateX(25%);
-	}
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: backgroundLoop 25s infinite;
   }
 
+  /* Background animation with 5 images, each shown for 5 seconds */
+  @keyframes backgroundLoop {
+    0% {
+      background-image: url('JaneDoe.jpg');
+    }
+    20% {
+      background-image: url('JaneDoe.jpg');
+    }
+    25% {
+      background-image: url('JinhsiWuWa.jpg');
+    }
+    45% {
+      background-image: url('JinhsiWuWa.jpg');
+    }
+    50% {
+      background-image: url('image3.jpg');
+    }
+    70% {
+      background-image: url('image3.jpg');
+    }
+    75% {
+      background-image: url('image4.jpg');
+    }
+    95% {
+      background-image: url('image4.jpg');
+    }
+    100% {
+      background-image: url('image5.jpg');
+    }
+  }
+  
 /* Buttons */ 
-.arrow {
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 2px 2px #000000;
+}
+
+.cards .red {
+  background-color: #20CC00;
+}
+
+.cards .blue {
+  background-color: #189900;
+}
+
+.cards .green {
+  background-color: #106600;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
   cursor: pointer;
-  height: 80px;
-  right: 2%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  transition: transform 0.1s;
-  width: 70px;
+  transition: 400ms;
 }
 
-.arrow-top, .arrow-bottom {
-  background-color: #7dff99;
-  height: 4px;
-  left: -5px;
-  position: absolute;
-  top: 50%;
-  width: 100%;
+.cards .card p.tip {
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
-.arrow-top:after, .arrow-bottom:after {
-  background-color: #fff;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: all 0.15s;
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
 }
 
-.arrow-top {
-  transform: rotate(45deg);
-  transform-origin: bottom right;
+.cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
 }
 
-.arrow-top:after {
-  left: 100%;
-  right: 0;
-  transition-delay: 0s;
-}
-
-.arrow-bottom {
-  transform: rotate(-45deg);
-  transform-origin: top right;
-}
-
-.arrow-bottom:after {
-  left: 0;
-  right: 100%;
-  transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-top:after {
-  left: 0;
-  transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-bottom:after {
-  right: 0;
-  transition-delay: 0s;
-}
-
-.arrow:active {
-  transform: translateX(-50%) translateY(-50%) scale(0.9);
-}
- 
  /* Cube */
  .cube {
   position: absolute; bottom: 10%; left: 5%;
@@ -285,4 +254,145 @@ html {
 	color:#fff;
 	text-shadow: 4px 2px #000000;
 	transition: 0.3s;
+  }
+
+  #loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  /* Loading screen animation */
+  .ui-loadingScreen {
+    --primary: #28FF00;
+    --secondary: rgba(255, 255, 255, 0.3);
+    --shadow-blur: 3px;
+    --text-shadow-blur: 3px;
+    --animation-duration: 2s;
+    --size: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    scale: var(--size);
+  }
+  
+  .ui-loadingScreen .ui-text {
+    color: var(--primary);
+    text-shadow: 0 0 var(--text-shadow-blur) var(--secondary);
+    font-family: Menlo, sans-serif;
+    display: flex;
+    align-items: baseline;
+    column-gap: 3px;
+  }
+  
+  .ui-loadingScreen .ui-dot {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: var(--primary);
+    animation: dots var(--animation-duration) infinite linear;
+    animation-delay: .4s;
+  }
+  
+  .ui-loadingScreen .ui-dot:nth-child(2) {
+    animation-delay: .8s;
+  }
+  
+  .ui-loadingScreen .ui-dot:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+  
+  .loadingScreen-loader {
+    width: 103px;
+    height: 90px;
+    position: relative;
+  }
+  
+  .loadingScreen-loader div {
+    width: 50px;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 21px solid var(--primary);
+    position: absolute;
+    filter: drop-shadow(0 0 var(--shadow-blur) var(--secondary));
+  }
+  
+  .loadingScreen-loader div:nth-child(1) {
+    top: 27px;
+    left: 7px;
+    rotate: -60deg;
+    animation: line1 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .loadingScreen-loader div:nth-child(2) {
+    bottom: 2px;
+    left: 0;
+    rotate: 180deg;
+    animation: line2 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .loadingScreen-loader div:nth-child(3) {
+    bottom: 16px;
+    right: -9px;
+    rotate: 60deg;
+    animation: line3 var(--animation-duration) linear infinite alternate;
+  }
+  
+  @keyframes line1 {
+    0%, 40% {
+      top: 27px;
+      left: 7px;
+      rotate: -60deg;
+    }
+    60%, 100% {
+      top: 22px;
+      left: 14px;
+      rotate: 60deg;
+    }
+  }
+  
+  @keyframes line2 {
+    0%, 40% {
+      bottom: 2px;
+      left: 0;
+      rotate: 180deg;
+    }
+    60%, 100% {
+      bottom: 5px;
+      left: -8px;
+      rotate: 300deg;
+    }
+  }
+  
+  @keyframes line3 {
+    0%, 40% {
+      bottom: 16px;
+      right: -9px;
+      rotate: 60deg;
+    }
+    60%, 100% {
+      bottom: 7px;
+      right: -11px;
+      rotate: 180deg;
+    }
+  }
+  
+  @keyframes dots {
+    0% {
+      background-color: var(--secondary);
+    }
+    30% {
+      background-color: var(--primary);
+    }
+    70%, 100% {
+      background-color: var(--secondary);
+    }
   }

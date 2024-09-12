@@ -3,22 +3,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="hobbies_styles.css">
 <body>
-	<script src="index_script.js"></script>
+	<script src="hobbies_script.js"></script>
 
-<div class="arrow">
-  <div class="arrow-top"></div>
-  <div class="arrow-bottom"></div>
-</div>
+  <div id="loading-screen" class="ui-loadingScreen">
+	  <div class="loadingScreen-loader">
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		</div>
+		<div class="ui-text">
+		  Synchronization
+		  <div class="ui-dot"></div>
+		  <div class="ui-dot"></div>
+		  <div class="ui-dot"></div>
+		</div>
+	</div>
 
-<div class="personal">
-  <h1> Hobbies</h1>
-  <div class="personal-top"></div>
-  <div class="personal-bottom"></div>
-</div>
+	<div id="main-content" style="display: none;">
+    <div class="cards">
+      <div class="card red">
+        <a href="../index.html">
+        <p class="tip">HOME</p>
+        </a>
+      </div>
+      <div class="card blue">
+        <a href="">
+        <p class="tip">ABOUT ME</p>
+        </a>
+      </div>
+      <div class="card green">
+        <a href="">
+        <p class="tip">GALLERY</p>
+        </a>
+      </div>
+    </div>
 
-<div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
+    <div class="personal">
+      <h1> Hobbies</h1>
+    </div>
 
 </body>
 </html>

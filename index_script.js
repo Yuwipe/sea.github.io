@@ -1,5 +1,5 @@
 // Cursor Trail
-const trailCount = 20; // Number of trails to create
+const trailCount = 50; // Number of trails to create
 const trails = [];
 
 // Create the trail elements and append them to the document

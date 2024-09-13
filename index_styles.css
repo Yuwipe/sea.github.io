@@ -64,8 +64,8 @@ html {
   flex-direction: column;
   gap: 15px;
   position: absolute;
-  right: 3%;
-  top: 50%;
+  right: 15%;
+  bottom: -10%;
   transform: translateY(-50%);
 }
 
@@ -241,8 +241,8 @@ html {
   text-align: center;
   color: #000000;
   text-shadow: 4px 2px #30b969;
-  top: 45%; 
-  left: 50%;
+  top: 25%; 
+  left: 78%;
   transform: translate(-50%, -50%);
   font-size: 400%;
   font-family: 'Orbitron', sans-serif;
@@ -395,3 +395,46 @@ html {
       background-color: var(--secondary);
     }
   }
+
+  .characters {
+    position: absolute;
+    width: 1094px;
+    height: 95%;
+    top: 5%;
+    left: 5%;
+    animation: backgroundLoop 30s infinite;
+  }
+
+/* Background animation with 5 images, each shown for 5 seconds */
+@keyframes backgroundLoop {
+  0% {
+    background-image: url('./GALLERY/index/Jane.png');
+  }
+  10% {
+    background-image: url('./GALLERY/index/Corin.png');
+  }
+  20% {
+    background-image: url('./GALLERY/index/Qingyi.png');
+  }
+  35% {
+    background-image: url('./GALLERY/index/Qingyi.png');
+  }
+  45% {
+    background-image: url('./GALLERY/index/Corin.png');
+  }
+  55% {
+    background-image: url('./GALLERY/index/Nicole.png');
+  }
+  70% {
+    background-image: url('./GALLERY/index/Nicole.png');
+  }
+  80% {
+    background-image: url('./GALLERY/index/Corin.png');
+  }
+  90% {
+    background-image: url('./GALLERY/index/Jane.png');
+  }
+  100% {
+    background-image: url('./GALLERY/index/Jane.png');
+  }
+}

@@ -1,0 +1,472 @@
+/* Cursor Trail */
+.trail {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: radial-gradient(circle, rgba(0, 255, 0, 0.473), transparent);
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 9999;
+  }
+@keyframes fade {
+	from {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	to {
+	  transform: scale(0.5);
+	  opacity: 0;
+	}
+  }
+
+/* New Addons */
+html, body {
+	height:100%;
+  margin: 0;
+  }
+
+  body {
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundLoop 30s infinite;
+  }
+
+  /* Background animation with 5 images, each shown for 5 seconds */
+  @keyframes backgroundLoop {
+    0% {
+      background-image: url('../GALLERY/JaneDoe.jpg');
+    }
+    11% {
+      background-image: url('../GALLERY/JinhsiWuWa.jpg');
+    }
+    22% {
+      background-image: url('../GALLERY/JinhsiWuWa.jpg');
+    }
+    33% {
+      background-image: url('../GALLERY/Rushia.jpg');
+    }
+    44% {
+      background-image: url('../GALLERY/Rushia.jpg');
+    }
+    55% {
+      background-image: url('../GALLERY/Tatsumaki.jpg');
+    }
+    66% {
+      background-image: url('../GALLERY/Tatsumaki.jpg');
+    }
+    78% {
+      background-image: url('../GALLERY/Coffee.png');
+    }
+    88% {
+      background-image: url('../GALLERY/Coffee.png');
+    }
+    100% {
+      background-image: url('../GALLERY/JaneDoe.jpg');
+    }
+  }
+  
+/* Buttons */ 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 2px 2px #000000;
+}
+
+.cards .red {
+  background-color: #20CC00;
+}
+
+.cards .blue {
+  background-color: #189900;
+}
+
+.cards .green {
+  background-color: #106600;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
+}
+
+ /* Cube */
+ .cube {
+  position: absolute; bottom: 10%; left: 5%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animateD 8s linear infinite;
+}
+
+@keyframes animateD {
+  0% {
+    transform: rotateX(-15deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(-15deg) rotateY(-360deg);
+  }
+}
+
+.cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cube2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transform-style: preserve-3d;
+  animation: animateD2 5s ease-out infinite alternate;
+}
+
+@keyframes animateD2 {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(180deg) rotateY(-360deg);
+  }
+}
+
+.cube2 div {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 65%;
+  height: 65%;
+  transform-style: preserve-3d;
+}
+
+.cube2 div span {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 65%;
+  height: 65%;
+  background: transparent;
+  border: 2px solid #7dff99;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(62px);
+}
+
+.cube3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animateD3 1s ease-in-out infinite alternate;
+}
+
+@keyframes animateD3 {
+  0% {
+    transform: rotateX(-90deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(90deg) rotateY(45deg);
+  }
+}
+
+.cube3 div {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  width: 15%;
+  height: 15%;
+  transform-style: preserve-3d;
+}
+
+.cube3 div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7dff99;
+  transform: rotateY(calc(90deg * var(--i))) translateZ(14px);
+  box-shadow: 0px 0px 7px #7dff99;
+}
+
+.top3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #7dff99;
+  transform: rotateX(90deg) translateZ(14px);
+  box-shadow: 0px 0px 10px #7dff99;
+}
+
+/* Middle Text */
+.personal {
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  color: #000000;
+  text-shadow: 4px 2px #30b969;
+  top: 10%; left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 400%;
+  transition: transform 0.3s;
+}
+
+.personal:hover {
+	color:#fff;
+	text-shadow: 4px 2px #000000;
+	transition: 0.3s;
+  }
+
+  #loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  /* Loading screen animation */
+  .ui-loadingScreen {
+    --primary: #28FF00;
+    --secondary: rgba(255, 255, 255, 0.3);
+    --shadow-blur: 3px;
+    --text-shadow-blur: 3px;
+    --animation-duration: 2s;
+    --size: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    scale: var(--size);
+  }
+  
+  .ui-loadingScreen .ui-text {
+    color: var(--primary);
+    text-shadow: 0 0 var(--text-shadow-blur) var(--secondary);
+    font-family: Menlo, sans-serif;
+    display: flex;
+    align-items: baseline;
+    column-gap: 3px;
+  }
+  
+  .ui-loadingScreen .ui-dot {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: var(--primary);
+    animation: dots var(--animation-duration) infinite linear;
+    animation-delay: .4s;
+  }
+  
+  .ui-loadingScreen .ui-dot:nth-child(2) {
+    animation-delay: .8s;
+  }
+  
+  .ui-loadingScreen .ui-dot:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+  
+  .loadingScreen-loader {
+    width: 103px;
+    height: 90px;
+    position: relative;
+  }
+  
+  .loadingScreen-loader div {
+    width: 50px;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 21px solid var(--primary);
+    position: absolute;
+    filter: drop-shadow(0 0 var(--shadow-blur) var(--secondary));
+  }
+  
+  .loadingScreen-loader div:nth-child(1) {
+    top: 27px;
+    left: 7px;
+    rotate: -60deg;
+    animation: line1 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .loadingScreen-loader div:nth-child(2) {
+    bottom: 2px;
+    left: 0;
+    rotate: 180deg;
+    animation: line2 var(--animation-duration) linear infinite alternate;
+  }
+  
+  .loadingScreen-loader div:nth-child(3) {
+    bottom: 16px;
+    right: -9px;
+    rotate: 60deg;
+    animation: line3 var(--animation-duration) linear infinite alternate;
+  }
+  
+  @keyframes line1 {
+    0%, 40% {
+      top: 27px;
+      left: 7px;
+      rotate: -60deg;
+    }
+    60%, 100% {
+      top: 22px;
+      left: 14px;
+      rotate: 60deg;
+    }
+  }
+  
+  @keyframes line2 {
+    0%, 40% {
+      bottom: 2px;
+      left: 0;
+      rotate: 180deg;
+    }
+    60%, 100% {
+      bottom: 5px;
+      left: -8px;
+      rotate: 300deg;
+    }
+  }
+  
+  @keyframes line3 {
+    0%, 40% {
+      bottom: 16px;
+      right: -9px;
+      rotate: 60deg;
+    }
+    60%, 100% {
+      bottom: 7px;
+      right: -11px;
+      rotate: 180deg;
+    }
+  }
+  
+  @keyframes dots {
+    0% {
+      background-color: var(--secondary);
+    }
+    30% {
+      background-color: var(--primary);
+    }
+    70%, 100% {
+      background-color: var(--secondary);
+    }
+  }
+
+/* Hobbies Card */
+.carrot {
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 4px;
+    background:rgba(14, 14, 14, 0.5);
+    display: flex;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    gap: 5px;
+    padding: 0.4em;
+    overflow: hidden; /* Hide overflow content */
+}
+
+.carrot p {
+  font-size: 150%;
+}
+
+.carrot div {
+    height: 100%;
+    flex: 1;
+    color: #28FF00;
+    font-size: 120%;
+    text-shadow: 2px 2px #000000;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: flex 0.5s ease, background 0.5s ease;
+    border: 3px solid #28FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure absolute positioning for child elements */
+}
+
+.carrot span {
+    min-width: 14em;
+    padding: 0.5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-transform: uppercase;
+    color: #28FF00;
+    letter-spacing: 0.1em;
+    position: absolute; /* Positioned absolutely within the parent */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg); /* Center and rotate */
+}
+
+.carrot div:hover {
+    flex: 4;
+    background: rgba(0, 0, 0, 0.5); /* Darker background on hover for contrast */
+}
+
+.carrot div:hover span {
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 1; /* Ensure text is fully visible */
+}
+
+.carrot div span {
+    opacity: 0; /* Hide text initially */
+}
+
+.carrot div:hover p {
+    opacity: 0;
+}

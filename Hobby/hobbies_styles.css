@@ -35,34 +35,34 @@ html, body {
   /* Background animation with 5 images, each shown for 5 seconds */
   @keyframes backgroundLoop {
     0% {
-      background-image: url('JaneDoe.jpg');
+      background-image: url('../GALLERY/JaneDoe.jpg');
     }
     11% {
-      background-image: url('JinhsiWuWa.jpg');
+      background-image: url('../GALLERY/JinhsiWuWa.jpg');
     }
     22% {
-      background-image: url('JinhsiWuWa.jpg');
+      background-image: url('../GALLERY/JinhsiWuWa.jpg');
     }
     33% {
-      background-image: url('Rushia.jpg');
+      background-image: url('../GALLERY/Rushia.jpg');
     }
     44% {
-      background-image: url('Rushia.jpg');
+      background-image: url('../GALLERY/Rushia.jpg');
     }
     55% {
-      background-image: url('Tatsumaki.jpg');
+      background-image: url('../GALLERY/Tatsumaki.jpg');
     }
     66% {
-      background-image: url('Tatsumaki.jpg');
+      background-image: url('../GALLERY/Tatsumaki.jpg');
     }
     78% {
-      background-image: url('Midoriya.png');
+      background-image: url('../GALLERY/Coffee.png');
     }
     88% {
-      background-image: url('Midoriya.png');
+      background-image: url('../GALLERY/Coffee.png');
     }
     100% {
-      background-image: url('JaneDoe.jpg');
+      background-image: url('../GALLERY/JaneDoe.jpg');
     }
   }
   

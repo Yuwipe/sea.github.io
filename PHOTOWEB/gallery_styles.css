@@ -245,7 +245,7 @@ html, body {
   position: absolute;
   text-align: center;
   color: #000000;
-  text-shadow: 4px 2px #30b969;
+  text-shadow: 2px 2px #FFFFFF;
   top: 10%; left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

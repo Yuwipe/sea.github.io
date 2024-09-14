@@ -1,0 +1,93 @@
+/* Bangboo */
+.bbcontainer {
+  position: absolute;
+  top: 75%;
+}
+
+.bbcontainer:hover{
+  transform: translateY(-50px);
+}
+
+img {
+  width: 50%;
+}
+
+#amillion {
+  left: -3%;
+}
+
+#avocaboo {
+  left: 2%;
+}
+
+#bagboo {
+  left: 7%;
+}
+
+#bangvolver {
+  left: 12%;
+}
+
+#boollseye {
+  left: 17%;
+}
+
+#booressure {
+  left: 22%;
+}
+
+#butler {
+  left: 27%;
+}
+
+#cryboo {
+  left: 32%;
+}
+
+#devilboo {
+  left: 37%;
+}
+
+#electroboo {
+  left: 42%;
+}
+
+#exploreboo {
+  left: 47%;
+}
+
+#luckyboo {
+  left: 52%;
+}
+
+#magnetiboo {
+  left: 57%;
+}
+
+#officercui {
+  left: 62%;
+}
+
+#paperboo {
+  left: 67%;
+}
+
+#penguinboo {
+  left: 72%;
+}
+
+#plugboo {
+  right: -3%;
+}
+
+#resonaboo {
+  right: -8%;
+}
+
+#rocketboo {
+  right: -13%;
+}
+
+#sharkboo {
+  right: -18%;
+}

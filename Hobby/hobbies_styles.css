@@ -123,180 +123,74 @@ html, body {
 	text-shadow: 4px 2px #000000;
 	transition: 0.3s;
   }
-
-  #loading-screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
   
 /* Hobbies Card */
 .carrot {
-    width: 50%;
-    height: 50%;
-    align-items: center;
-    flex-direction: row;
-    border-radius: 4px;
-    background:rgba(14, 14, 14, 0.5);
-    display: flex;
-    position: absolute;
-    top: 20%;
-    right: 25%;
-    gap: 5px;
-    padding: 0.4em;
-    overflow: hidden; /* Hide overflow content */
+  width: 70%;
+  height: 50%;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 4px;
+  background:rgba(14, 14, 14, 0.5);
+  display: flex;
+  position: absolute;
+  top: 20%;
+  right: 23%;
+  gap: 5px;
+  padding: 0.4em;
+  overflow: hidden; /* Hide overflow content */
 }
 
 .carrot p {
-  font-size: 150%;
+font-size: 150%;
 }
 
 .carrot div {
-    height: 100%;
-    flex: 1;
-    color: #28FF00;
-    font-size: 120%;
-    text-shadow: 2px 2px #000000;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: flex 0.5s ease, background 0.5s ease;
-    border: 3px solid #28FF00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Ensure absolute positioning for child elements */
+  height: 100%;
+  flex: 1;
+  color: #28FF00;
+  font-size: 120%;
+  text-shadow: 2px 2px #000000;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: flex 0.5s ease, background 0.5s ease;
+  border: 3px solid #28FF00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure absolute positioning for child elements */
 }
 
 .carrot span {
-    min-width: 14em;
-    padding: 0.5em;
-    text-align: center;
-    transform: rotate(-90deg);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    text-transform: uppercase;
-    color: #28FF00;
-    letter-spacing: 0.1em;
-    position: absolute; /* Positioned absolutely within the parent */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg); /* Center and rotate */
+  min-width: 14em;
+  padding: 0.5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  text-transform: uppercase;
+  color: #28FF00;
+  letter-spacing: 0.1em;
+  position: absolute; /* Positioned absolutely within the parent */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); /* Center and rotate */
 }
 
 .carrot div:hover {
-    flex: 4;
-    background: rgba(0, 0, 0, 0.5); /* Darker background on hover for contrast */
+  flex: 4;
+  background: rgba(0, 0, 0, 0.5); /* Darker background on hover for contrast */
 }
 
 .carrot div:hover span {
-    transform: translate(-50%, -50%) rotate(0);
-    opacity: 1; /* Ensure text is fully visible */
+  transform: translate(-50%, -50%) rotate(0);
+  opacity: 1; /* Ensure text is fully visible */
 }
 
 .carrot div span {
-    opacity: 0; /* Hide text initially */
+  opacity: 0; /* Hide text initially */
 }
 
 .carrot div:hover p {
-    opacity: 0;
-}
-
-/* Bangboo */
-.bbcontainer {
-  position: absolute;
-  top: 75%;
-}
-
-.bbcontainer:hover{
-  transform: translateY(-50px);
-}
-
-img {
-  width: 50%;
-}
-
-#amillion {
-  left: -3%;
-}
-
-#avocaboo {
-  left: 2%;
-}
-
-#bagboo {
-  left: 7%;
-}
-
-#bangvolver {
-  left: 12%;
-}
-
-#boollseye {
-  left: 17%;
-}
-
-#booressure {
-  left: 22%;
-}
-
-#butler {
-  left: 27%;
-}
-
-#cryboo {
-  left: 32%;
-}
-
-#devilboo {
-  left: 37%;
-}
-
-#electroboo {
-  left: 42%;
-}
-
-#exploreboo {
-  left: 47%;
-}
-
-#luckyboo {
-  left: 52%;
-}
-
-#magnetiboo {
-  left: 57%;
-}
-
-#officercui {
-  left: 62%;
-}
-
-#paperboo {
-  left: 67%;
-}
-
-#penguinboo {
-  left: 72%;
-}
-
-#plugboo {
-  right: -3%;
-}
-
-#resonaboo {
-  right: -8%;
-}
-
-#rocketboo {
-  right: -13%;
-}
-
-#sharkboo {
-  right: -18%;
+  opacity: 0;
 }

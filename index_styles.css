@@ -16,6 +16,11 @@ body {
   animation: animateD 8s linear infinite;
 }
 
+.cube p {
+  text-align: center;
+  color: #fff;
+}
+
 .cube div:hover {
   height: 100%;
   width: 100%;
